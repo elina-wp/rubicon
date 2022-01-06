@@ -1,0 +1,162 @@
+.link {
+    &-primary {
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+        }
+    }
+    &-secondary {
+        color: $secondary;
+
+        &:hover,
+        &:focus {
+            color: $primary;
+        }
+    }
+    &-white {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+        }
+    }
+}
+
+.line {
+    &-draw {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding-bottom: 0.6rem;
+        padding-right: 0.5rem;
+
+        &:before {
+            content: '';
+            display: block;
+            width: calc(100% + 5px);
+            height: 0.3rem;
+            background-color: $primary;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $eggshell;
+            height: 0.3rem;
+            width: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        &:hover {
+            color: inherit;
+
+            &:after {
+                animation-name: line-animate;
+                animation-duration: 1.1s;
+                animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+            }
+        }
+
+        &-01 {
+            position: relative;
+            display: inline-block;
+            // cursor: pointer;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 0.8rem;
+                background-color: $secondary;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                margin-top: -0.4rem;
+
+                @include media-breakpoint-up(md) {
+                    width: 0;
+                    animation: width .6s .6s forwards;
+                    height: 1.6rem;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    height: 2.3rem;
+                }
+
+                @keyframes width {
+                    to{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-no-animate {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &.text-primary {
+                &::after {
+                    background-color: $primary;
+                }
+            }
+
+            &.text-white {
+                &::after {
+                    background-color: $white;
+                }
+            }
+
+            &--small::after {
+                @include media-breakpoint-up(md) {
+                    height: 1.2rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        &--invert {
+            color: $white;
+
+            &:hover {
+                color: $white;
+            }
+            &::before {
+                background-color: $white;
+            }
+
+            &::after {
+                background-color: $primary;
+            }
+        }
+        &.link-text-small {
+            &::before,
+            &::after {
+                bottom: 1rem;
+            }
+        }
+    }
+}
+
+@keyframes line-animate {
+    50% {
+        width: calc(100% + 5px);
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% + 5px);
+    }
+}
+
+.hide-link-text {
+    span {
+        @extend .text-indent;
+    }
+}

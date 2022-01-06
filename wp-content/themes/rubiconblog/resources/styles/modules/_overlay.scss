@@ -1,0 +1,47 @@
+@import '../common-imports';
+
+.overlay {
+    position: relative;
+    &--primary {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $primary;
+            mix-blend-mode: multiply;
+        }
+    }
+    &--golden {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: multiply;
+            @extend .bg-golden;
+        }
+    }
+    &--skyblue {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: multiply;
+            @extend .bg-skyblue;
+        }
+    }
+
+    &--grayscale {
+        img {
+            filter: grayscale(100%);
+        }
+    }
+}

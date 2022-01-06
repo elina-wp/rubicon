@@ -1,0 +1,29 @@
+@import '../common-imports';
+
+.who-we-are {
+    &__core-values {
+        @include media-breakpoint-up(md) {
+            padding: 11.2rem 0 !important;
+        }
+        .core-values__cards {
+            .card-a04:last-child {
+                & > div {
+                    margin-bottom: 0 !important;
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+    }
+    .info-banner-a01 {
+        @include media-breakpoint-down(md) {
+            padding: 0;
+        }
+    }
+    .join-form-banner {
+        margin-top: 1.6rem;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -15.9rem;
+        }
+    }
+}

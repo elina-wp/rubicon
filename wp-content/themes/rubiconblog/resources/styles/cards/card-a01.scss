@@ -1,0 +1,14 @@
+.card-a01 {
+    transition: all 0.3s;
+    &__avatar {
+        $size: 8rem;
+        height: $size;
+        width: $size;
+        img {
+            object-fit: cover;
+        }
+    }
+    &:hover {
+        color: $primary;
+    }
+}

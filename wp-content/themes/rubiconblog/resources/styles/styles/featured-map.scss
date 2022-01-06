@@ -1,0 +1,62 @@
+@import '../common-imports';
+
+.featured-map {
+    &-container {
+        &-left {
+            border-radius: 3px 0 0 3px;
+            @include media-breakpoint-up(md) {
+                margin-right: -2.4rem;
+            }
+            @include media-breakpoint-up(xl) {
+                margin-left: calc(50% - 20vw);
+            }
+        }
+        &-right {
+            border-radius: 0 3px 3px 0;
+            width: 100%;
+            padding: 4.8rem 2.4rem;
+            @include media-breakpoint-up(md) {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+                padding-left: 2rem;
+            }
+            @include media-breakpoint-up(lg) {
+                padding-left: 15%;
+            }
+            @include media-breakpoint-up(xl) {
+                padding-top: 11.1rem;
+                padding-bottom: 13.1rem;
+                padding-left: 26%;
+                width: calc(100% + 7.5vw);
+                margin-right: calc(10% - 50vw);
+            }
+        }
+    }
+    &__img {
+        img {
+            max-width: 9.2rem !important;
+            @include media-breakpoint-up(md) {
+                max-width: 17rem !important;
+            }
+        }
+    }
+
+    &__btns {
+        .link-text {
+            &::before{
+                background-color: $primary;
+            }
+            &::after{
+                background-color: $voilet;
+            }
+            @include media-breakpoint-down(md) {
+                min-width: 12.6rem;
+            }
+        }
+        .ms-8 {
+            @media (max-width: 389px) {
+                margin-left: 2rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import '../common-imports';
+@import 'who-we-are';
+
+[class*='leadspace'] {
+    & + .tab-listing {
+        margin-top: -4.3rem;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -7.5rem;
+        }
+    }
+}
+
+.tab-listing {
+    .team-tab {
+        .card-list {
+            .card-list {
+                &__cards {
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: -2.4rem !important;
+                    }
+                }
+            }
+
+            & + .card-list {
+                .card-list {
+                    &__container {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+
+        .join-form-banner {
+            @include media-breakpoint-up(lg) {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .title-with-bullets {
+        &-a02 {
+            @include media-breakpoint-up(lg) {
+                padding: 11.2rem 0 13rem;
+            }
+        }
+    }
+}

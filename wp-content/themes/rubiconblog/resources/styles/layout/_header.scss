@@ -1,0 +1,210 @@
+.#{$global} {
+    &-header {
+        padding: 4.8rem 0 4.8rem;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+
+        @include media-breakpoint-up(md) {
+            padding: 8.5rem 0 8rem;
+        }
+
+        .site {
+            &-logo {
+                svg,
+                img {
+                    @include media-breakpoint-down(sm) {
+                        height: 2.3rem;
+                        width: auto;
+                    }
+                }
+
+                .back-link{
+                    opacity: 0;
+                    transform: translateX(-15px);
+                    pointer-events: none;
+                    position: absolute;
+                    transition: .3s all;
+                    i{
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &--toggle-link{
+                    .logo-link{
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: .3s all;
+                    }
+                    .back-link{
+                        opacity: 1;
+                        transform: translateX(0px);
+                        pointer-events: unset;
+                    }
+                }
+            }
+
+            &-navigation {
+                > li {
+                    display: flex;
+                    margin-bottom: 0;
+                    padding-left: 0;
+
+                    &:not(:first-child) {
+                        margin-left: 5.2rem;
+                    }
+                }
+
+                .dropdown {
+                    > a {
+                        padding-bottom: 1.8rem;
+                    }
+                }
+
+                .dropdown-menu {
+                    border: none;
+                    min-width: 155px;
+                    top: 100%;
+                    margin-top: -1px !important;
+                    font-size: 20px;
+                    color: inherit;
+                    left: 50%;
+                    padding: 0;
+                    border-radius: 2px;
+                    transform: translate(-50%, 10px);
+                    opacity: 0;
+                    transform-origin: top;
+                    transition-duration: 0.25s;
+                    background-color: $white;
+                    padding: 1.4rem 1.4rem 1.6rem 1.7rem;
+                    pointer-events: none;
+
+                    &::before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-left: 9px solid transparent;
+                        border-right: 9px solid transparent;
+                        border-bottom: 9px solid $white;
+                        position: absolute;
+                        top: -9px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    // background-color: rgba(255, 255, 255, 0.8);
+                    list-style-type: none;
+                    border-radius: 0;
+
+                    > li {
+                        padding-left: 0;
+                        border-bottom: 1px solid $light-gray-border;
+
+                        &:last-child {
+                            margin-bottom: 0 !important;
+                        }
+                    }
+
+                    a {
+                        padding: 0 0 5px 0;
+
+                        &:hover {
+                            // color: $primary;
+                        }
+                    }
+                }
+
+                .dropdown-is-on {
+                    .nav-link {
+                        span {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--light {
+            .site {
+                &-logo {
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                    .back-link {
+                        color: $white;
+                    }
+                }
+
+                &-navigation {
+                    li {
+                        .text-secondary {
+                            color: $white !important;
+
+                            &::before {
+                                background-color: $white;
+                            }
+
+                            &::after {
+                                background-color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                &-inner,
+                &-inner::after {
+                    background-color: $white;
+                }
+
+                &.is-active {
+                    .hamburger {
+                        &-inner,
+                        &-inner::after {
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// For Hover on Desktop
+@include media-breakpoint-up(lg) {
+    .site-navigation .nav-item:hover > .dropdown-menu {
+        transition: all 0.1s ease;
+        pointer-events: all;
+    }
+
+    .theme-header {
+        transition: none;
+    }
+
+    .nav-item > .dropdown-menu,
+    .nav-item:hover > .dropdown-menu .dropdown .dropdown-menu {
+        display: block;
+    }
+
+    .nav-item:hover > .dropdown-menu .dropdown .dropdown-menu {
+        left: 100%;
+        top: 0;
+    }
+
+    .nav-item:hover > .dropdown-menu {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+
+    .nav-item:hover > .dropdown-menu .dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+    }
+}

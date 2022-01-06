@@ -1,0 +1,36 @@
+@import '../common-imports';
+
+.card-list {
+    &__container {
+        padding: 6.4rem 0 4.8rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 11.2rem 0;
+        }
+
+        & > .container {
+            @media (min-width: 1200px) and (max-width: 1700px) {
+                padding-left: 10.85rem;
+                padding-right: 10.85rem;
+            }
+        }
+
+        header {
+            &.card-list__sub-heading {
+                margin-top: 1.6rem;
+
+                @include media-breakpoint-up(md) {
+                    margin-top: 3.2rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin-top: 6rem;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    margin-top: 8rem;
+                }
+            }
+        }
+    }
+}

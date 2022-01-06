@@ -1,0 +1,18 @@
+@import '../common-imports';
+
+.state-legislation {
+    &__left-col {
+        @include media-breakpoint-up(md) {
+            // margin-top: unset;
+            border-right: 1px solid $gray-border;
+            height: 100vh;
+            background-color: unset !important;
+        }
+    }
+    &__state-img img {
+        width: 10rem;
+    }
+    // &__video{
+    //     height: 40rem;
+    // }
+}

@@ -1,0 +1,13 @@
+@import '../common-imports';
+
+.leadspace-02 {
+    padding-top: 13.5rem;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 21.4rem;
+    }
+    &-body {
+        p {
+        }
+    }
+}

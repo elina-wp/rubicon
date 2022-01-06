@@ -1,0 +1,27 @@
+@import '../common-imports';
+
+
+
+.two-col-with-form {
+    padding-bottom: 9.5rem !important;
+
+    &[class*='bg-'] {
+        .form-wrapper {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+}
+
+
+.form-wrapper {
+    #can_thank_you {
+        h1{
+            @include media-breakpoint-up(md) {
+                font-size: 8rem;
+                line-height: 9rem;
+            }
+        }
+    }
+}

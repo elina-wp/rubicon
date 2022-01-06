@@ -1,0 +1,75 @@
+@import '../common-imports';
+
+.leadspace-03 {
+  padding: 15.1rem 0 39.4rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 23.3rem 0 8.9rem;
+  }
+  &-header {
+    @include media-breakpoint-down(md){
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &--fullwidth {
+    .leadspace-03 {
+      &-header {
+        h2 {
+          @extend .h1;
+        }
+      }
+    }
+  }
+}
+
+.two-col-with-form {
+  padding: 0;
+  
+  .container {
+    &>.row {
+      padding: 0 0 8.1rem;
+      border-bottom: 1px solid $light-gray-border;
+      @include media-breakpoint-down(md){
+        padding: 0;
+        flex-direction: column-reverse;
+      }
+      &>[class*="col-"]{
+        &:first-child{
+          padding-top: 1.3rem;
+          @include media-breakpoint-up(md){
+            padding-top: 6.4rem;
+
+          }
+        }
+      }
+    }
+  }
+  .form-wrapper{
+    margin-top: -100%;
+    @include media-breakpoint-up(md){
+      margin-top: -50%;
+    }
+  }
+}
+
+
+.title-with-bullets-a01{
+  @include media-breakpoint-up(xl){
+    padding-top: -17.5rem;
+    padding-bottom: 11.2rem;
+    &-header{
+      @include media-breakpoint-up(xl){
+        padding-right: 45%;
+      }
+      .mt-23{
+        margin-top: 3.2rem !important;
+      }
+    }
+  }
+  .title-with-bullets__list{
+    @include media-breakpoint-up(xl){
+      margin-left: -34%;
+    }
+  }
+}

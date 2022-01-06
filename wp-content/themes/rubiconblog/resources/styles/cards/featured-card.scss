@@ -1,0 +1,15 @@
+.featured-card {
+    transition: 0.3s all;
+    &__image {
+        height: 23.2rem;
+        @include media-breakpoint-up(md) {
+            height: 42.8rem;
+        }
+        img {
+            object-fit: cover;
+        }
+    }
+    &:hover {
+        color: $primary;
+    }
+}

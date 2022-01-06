@@ -1,0 +1,24 @@
+@import '../common-imports';
+
+.resources {
+    &__left-col {
+        // margin-top: -16.8rem;
+        @include media-breakpoint-up(md) {
+            // margin-top: unset;
+            border-right: 1px solid $gray-border;
+            height: 100vh;
+            background-color: unset !important;
+        }
+        header > h5 {
+            font-family: $font-family-heading;
+            font-size: 3rem;
+            line-height: 4.2rem;
+        }
+    }
+    .card-a02 {
+        // &__date,
+        &__icon {
+            display: none !important;
+        }
+    }
+}

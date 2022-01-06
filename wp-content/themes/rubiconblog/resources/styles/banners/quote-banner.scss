@@ -1,0 +1,32 @@
+@import '../common-imports';
+
+.quote-banner {
+    &__container {
+        & > .container {
+            @media (min-width: 1200px) and (max-width: 1700px) {
+                padding-left: 10.85rem;
+                padding-right: 10.85rem;
+            }
+        }
+    }
+
+    &__quote {
+        span {
+            color: $primary;
+        }
+
+        h5 {
+            padding-top: 47px;
+
+            &::before {
+                content: '';
+                height: 3.2rem;
+                width: 3.7rem;
+                position: absolute;
+                top: 0;
+                background-size: cover;
+                background-image: url("data:image/svg+xml,%3Csvg width='37' height='31' viewBox='0 0 37 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37 30.9886V15.0709H31.7506C31.8352 10.9222 32.9359 8.80549 37 7.53547V0C24.4691 1.52403 21.5904 8.97483 21.5904 18.2883V30.9886H37ZM15.4943 30.9886V15.0709H10.2449C10.3295 10.9222 11.4302 8.80549 15.4943 7.53547V0C2.79405 1.52403 0 8.97483 0 18.2883V30.9886H15.4943Z' fill='%23FF3939'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}

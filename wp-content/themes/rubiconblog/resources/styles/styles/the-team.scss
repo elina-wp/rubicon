@@ -1,0 +1,47 @@
+@import '../common-imports';
+
+.the-team{
+    &__container{
+        @include media-breakpoint-up(md){
+            padding: 11.2rem 0 !important;
+        }
+
+        .card-list{
+            &__container{
+                padding: 0 !important;
+            }
+            &__heading{
+                margin-bottom: 1.6rem !important;
+                @include media-breakpoint-up(md){
+                    margin-bottom: 6rem !important;
+                }
+            }
+            &__sub-heading{
+                margin-bottom: 1.6rem !important;
+                @include media-breakpoint-up(md){
+                    margin-bottom: 0 !important;
+                    margin-top: 8rem !important;
+                }
+            }
+            &__cards{
+                margin-top: 3.2rem !important;
+            }
+        }
+    }
+    &__directors{
+        @include media-breakpoint-up(md){
+            margin-top: 11.2rem !important;
+        }
+        .directors__political-fund{
+            margin-top: -1.6rem;
+            @include media-breakpoint-up(md){
+                margin-top: -2.4rem;
+            }
+            .card-list{
+                &__heading{
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

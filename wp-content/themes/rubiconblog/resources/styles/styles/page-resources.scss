@@ -1,0 +1,7 @@
+@import '../common-imports';
+
+.leadspace-03 {
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 28rem;
+    }
+}

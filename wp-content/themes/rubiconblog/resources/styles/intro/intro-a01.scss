@@ -1,0 +1,14 @@
+.intro-a01 {
+    &__container {
+        @include media-breakpoint-up(md) {
+            padding: 11.2rem 0 !important;
+        }
+    }
+    &__title {
+        h3 {
+            span {
+                @extend .text-primary, .line-draw-01, .line-draw-01--small;
+            }
+        }
+    }
+}

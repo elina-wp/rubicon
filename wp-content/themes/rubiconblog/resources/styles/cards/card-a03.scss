@@ -1,0 +1,43 @@
+.card-a03 {
+    & > .row {
+        min-height: 20rem;
+        @include media-breakpoint-up(md) {
+            min-height: 26.4rem;
+        }
+    }
+    &__bar {
+        height: 100%;
+        position: relative;
+        border-left: 1px solid $gray-400;
+        &::before {
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            top: 0;
+            left: -6px;
+            border-radius: 50%;
+            background-color: $black;
+        }
+    }
+    &--small{
+        & > .row{
+            min-height: 17.2rem;
+        }
+        &__bar {
+            height: 100%;
+            position: relative;
+            border-left: 1px solid $gray-400;
+            &::before {
+                content: '';
+                height: 12px;
+                width: 12px;
+                position: absolute;
+                top: 0;
+                left: -6px;
+                border-radius: 50%;
+                background-color: var(--color);
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../common-imports';
+
+.map-table{
+    @include media-breakpoint-up(md){
+        padding-bottom: 11.2rem !important;
+    }
+    &__title{
+        border-bottom: 2px solid $charcoal;
+    }
+    &__states-list{
+        .card-a02{
+            padding-right: 1.6rem;
+            & > div{
+                padding: 1.2rem 0 !important;
+            }
+            &__title > strong{
+                font-weight: 400 !important;
+            }
+
+            &:hover {        
+                .card-a02__icon {
+                    transform: translateX(0px);
+                }
+            }
+        }
+    }
+}

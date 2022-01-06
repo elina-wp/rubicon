@@ -1,0 +1,31 @@
+.pagination {
+    &__prev {
+        margin-right: 1.2rem;
+        i {
+            transform: rotate(180deg);
+            display: block;
+        }
+    }
+    &__next {
+        margin-left: 1.2rem;
+    }
+    &__single-item {
+        margin-right: 0.4rem;
+        height: 28px;
+        width: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--active {
+            border: 1px solid $charcoal;
+        }
+    }
+    &__prev,
+    &__next,
+    &__single-item {
+        cursor: pointer;
+        &:hover {
+            color: $gray;
+        }
+    }
+}

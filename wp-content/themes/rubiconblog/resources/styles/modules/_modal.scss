@@ -1,0 +1,73 @@
+@import '../common-imports';
+
+.modal {
+    z-index: 10001;
+    &-team {
+        .btn-close {
+            cursor: pointer;
+            pointer-events: all;
+            font-size: 2.4rem;
+        }
+
+        .modal {
+            &-dialog {
+                max-width: none;
+                border: none;
+                margin: 1.6rem 0 0;
+                @include media-breakpoint-up(md) {
+                    margin-top: 0;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    padding-top: 7.4rem;
+                }
+            }
+
+            &-body {
+                padding: 1.6rem 1.6rem 7.1rem;
+                @include media-breakpoint-up(md) {
+                    padding: 2.4rem;
+                }
+                @include media-breakpoint-up(lg) {
+                    padding: 4.8rem 6.5rem 4.1rem 9.2rem;
+                }
+
+                &-sidebar {
+                    @include media-breakpoint-up(md) {
+                        flex: 0 0 34.7%;
+                    }
+                    .card-a01__avatar {
+                        width: 6.8rem;
+                        height: 6.8rem;
+                        @include media-breakpoint-up(md) {
+                            width: 10.9rem;
+                            height: 10.9rem;
+                        }
+                    }
+                }
+
+                &-content {
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    max-height: 52vh;
+                    @include media-breakpoint-up(md) {
+                        max-height: 57.51vh;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        padding-top: 3px;
+                        padding-left: 11.8rem;
+                    }
+                }
+            }
+
+            &-content {
+                @include media-breakpoint-up(md) {
+                }
+            }
+        }
+    }
+    &-backdrop.show{
+        opacity: .85;
+        z-index: 10000;
+    }
+}

@@ -1,0 +1,256 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    @extend %heading;
+    font-weight: $font-weight-bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+}
+
+h1,
+.h1,
+.display-1 {
+    font-size: 7.4rem;
+    line-height: 6.4rem;
+
+    @include media-breakpoint-up(md) {
+        font-size: 10rem;
+        line-height: 9rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 14rem;
+        line-height: 13rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: 18.5rem;
+        line-height: 16.8rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 6.4rem;
+    line-height: 5.9rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 10.2rem;
+        line-height: 9.4rem;
+    }
+
+    &-large {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+
+        @include media-breakpoint-up(md) {
+            font-size: 12rem;
+            line-height: 10rem;
+        }
+    }
+}
+
+h3,
+.h3 {
+    font-size: 4.8rem;
+    line-height: 4.6rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 9.3rem;
+        line-height: 9rem;
+    }
+
+    &-xl {
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+        font-family: $font-family-sans-serif;
+
+        @include media-breakpoint-up(md) {
+            font-size: 4.8rem;
+            line-height: 6.9rem;
+            text-transform: none;
+        }
+    }
+}
+
+h4,
+.h4 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 6.4rem;
+        line-height: 6.7rem;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+
+    &-xl{
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+}
+
+h6,
+.h6,
+.section-header {
+    font-weight: $font-weight-normal;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+.quote {
+    &-large {
+        font-weight: $font-weight-bold;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 4.8rem;
+            line-height: 5.7rem;
+        }
+    }
+}
+
+.eyebrow {
+    &-large {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+        }
+    }
+
+    &-small {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+}
+
+.button,
+.btn,
+.link-text {
+    font-weight: $font-weight-bold;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 1.9rem;
+        line-height: 2.9rem;
+    }
+
+    &-small {
+        font-weight: $font-weight-bold;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+}
+
+.body-1,
+body,
+.p {
+    &-xs {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    &-sm {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    &-md {
+        font-size: 1.6rem;
+        line-height: 2.416rem;
+        font-weight: $font-weight-bold;
+    }
+
+    &-lg {
+        font-size: 1.8rem;
+        line-height: 2.718rem;
+        font-weight: $font-weight-bold;
+    }
+
+    &-xl {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.letter-cap {
+    &::first-letter {
+        font-size: 5.1rem;
+        line-height: 4.9rem;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-family: $font-family-heading;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 5.9rem;
+            line-height: 5.6rem;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.filter-list {
+    @include media-breakpoint-up(sm) {
+        &__item {
+            $self: &;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid $gray-border;
+            cursor: pointer;
+            * {
+                transition: all 0.3s;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -100%;
+                bottom: 0;
+                height: 2px;
+                width: 100%;
+                background-color: $black;
+                transition: all 0.7s;
+            }
+
+            &:hover {
+                color: $primary;
+
+                &::before {
+                    left: 0px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        border: 1px solid $gray-border;
+        display: inline-block;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        &__item {
+            display: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            min-width: 150px;
+            border-bottom: none;
+            &:first-child {
+                display: block;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+
+        &.open {
+            border: 1px solid $black;
+            .filter-list__item {
+                display: block;
+                &:first-child {
+                    border-bottom: 1px solid $black;
+                }
+            }
+
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 1.3rem;
+            right: 1.5rem;
+            height: 2.4rem;
+            width: 2.4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.3818 1L8.19071 8.19113L0.999585 0.999999' stroke='%23282828' stroke-width='1.1736'/%3E%3C/svg%3E%0A");
+        }
+    }
+}

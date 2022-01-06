@@ -1,0 +1,18 @@
+@import '../common-imports';
+
+.cta-banner {
+    &__container {
+        padding: 11.2rem 0;
+        & > .container {
+            @media (min-width: 1200px) and (max-width: 1700px) {
+                padding-left: 10.85rem;
+                padding-right: 10.85rem;
+            }
+        }
+    }
+    &__description {
+        span {
+            color: $white;
+        }
+    }
+}
